@@ -12,32 +12,33 @@
 	<meta name="google-site-verification" content="3yEZRHo7iR6Ee9xjOmdQYxlEuCYDjUZXvhHKuvSN39U" />
 	<style type="text/css">
 		@import url(http://weloveiconfonts.com/api/?family=fontelico);
-		
+		@import url(http://weloveiconfonts.com/api/?family=brandico);
+
 		[class *= "fontelico-"]:before {
 			font-family: 'fontelico', sans-serif;
 		}
-		
+
 		body {
 			color: #333;
 			background: #fafafa;
 			font: 16px 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		}
-		
+
 		h1 {
 			color: #6a1b9a;
 			line-height: 2rem;
 			margin-top: 0;
 		}
-		
+
 		a {
 			color: #6a1b9a;
 			text-decoration: none;
 		}
-		
+
 		a:hover {
 			text-decoration: underline;
 		}
-		
+
 		.app-container {
 			display: flex;
 			flex-flow: row wrap;
@@ -45,7 +46,7 @@
 			align-content: stretch;
 			align-items: stretch;
 		}
-		
+
 		.app-item {
 			flex: 1 0 15rem;
 			margin: 2rem 1rem 1rem 1rem;
@@ -55,37 +56,55 @@
 			opacity: 0;
 			transform: scale(0.5);
 		}
-		
+
 		.app-item:first-child {
 			border: none;
 			background-color: transparent;
 		}
-		
+
 		.app-item.unused {
 			border-color: #eee;
 			background-color: #fefefe;
 		}
-		
+
 		.app-item.unused > img {
 			box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.07);
 		}
-		
+
 		.app-item.unused > .app-details:before {
 			content: 'To be made ... ';
 			color: #ccc;
 		}
-		
-		.app-item img {
+
+		.app-item > a > img {
 			width: 200px;
 			height: 150px;
 			box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
 			margin-bottom: 1rem;
+			transition: all 0.3s;
+			filter: grayscale(1);
 		}
-		
+
+		.app-item > a > img:hover {
+			filter: grayscale(0);
+		}
+
+		.app-item > a:nth-child(2) {
+			position: absolute;
+			font-family: 'brandico';
+			font-size: 24px;
+			top: 10px;
+			right: 10px;
+		}
+
+		.app-item > a:nth-child(2):after {
+			content: '\F308';
+		}
+
 		.app-details {
 			margin: 0.5rem;
 		}
-		
+
 		.app-details > header {
 			font-weight: 600;
 		}
@@ -117,43 +136,53 @@
 			<div class="app-details">
 				<h1>Medicor&#39;s Playground</h1>
 				<summary>
-					Me, playing around with the evolving <a href="https://www.webplatform.org/">Web Platform</a>. Hosted on my Radxa Rock. Developed with Cloud9 IDE.
+					Me, playing around with the evolving <a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform</a>. Developed with the <a href="https://c9.io">Cloud9 IDE</a> and hosted on my <a href="http://radxa.com/Rock">Radxa Rock</a> SBC.
 					<br><br>
-					This app is using <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox layout</a> without media queries (works somewhat). 
+					This app is using <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox layout</a> without media queries (works somewhat).
 					Also using <a href="http://blissfuljs.com/">Bliss</a> and <a href="https://cdn.polyfill.io/v2/docs/features/">Polyfill.io</a> as light sugaring.
 					Always using <a href="https://chrome.google.com/webstore/detail/simple-material-design-pa/onaeadclbaeleijcfmmhopgmmmpedifa">Simple Material Design Palette</a>.
 				</summary>
 			</div>
 		</div>
 		<div class="app-item">
-			<a href="http://cloud.medicor.se:3142/"><img src="images/shots/screenshot-nara.png" alt="NARA" /></a>
+			<a href="http://biomedbarnen.webflow.io/"><img src="images/shots/screenshot-biomedbarnen.png" alt="Bio med barnen" /></a>
 			<div class="app-details">
-				<header>NARA</header>
+				<header>Bio med barnen</header>
 				<summary>
-					A simple two-page, server-side rendered app built with Node.js, Express, 
-					<a href="https://github.com/ericf/express-handlebars">Express Handlebars</a>, 
-					MongoDB and Bootstrap.
-					Also free-hosted at <a href ="http://nara-medicor.rhcloud.com/">OpenShift</a> (which means it can take some time to wake up from hybernation <span class="fontelico-emo-saint"></span>).
+					A small blog made with the awesome <a href="https://webflow.com/">Webflow</a> designer tool. Here is were we plan our
+					next movie-and-dinner session.
 				</summary>
 			</div>
 		</div>
 		<div class="app-item">
-			<a href="http://stratum.medicor.se/"><img src="images/shots/screenshot-stratum-blog.png" alt="Stratum blog" /></a>
+			<a href="http://jaysee.medicor.se/"><img src="images/shots/screenshot-jaysee.png" alt="Jaysee" /></a>
+			<a href="https://github.com/medicor/jaysee"></a>
 			<div class="app-details">
-				<header>Stratum blog</header>
+				<header>Jaysee</header>
 				<summary>
-					A blog built with <a href="https://hexo.io/">Hexo</a>, 
-					which can be setup as a static site generator like <a href="https://jekyllrb.com/">Jekyll</a> (but Node.js), 
-					and as a live server as in this case.
-					Uses my Hexo theme <a href="https://github.com/medicor/lightpush">Lightpush</a>, 
-					my Hexo filter <a href="https://github.com/medicor/hexo-filter-api/">hexo-filter-api</a>
-					and the great, <a href="https://github.com/tryghost/Ghost">Ghost</a> like admin tool, 
-					<a href="https://github.com/jaredly/hexo-admin">hexo-admin</a>.
+					Yet another JSON visualizer <span class="fontelico-emo-thumbsup">.
+					My first shot att both <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a> and <a href="https://getmdl.io/">Google MDL</a>.
 				</summary>
 			</div>
 		</div>
 		<div class="app-item">
-			<a href="http://cloud.medicor.se/hsa-search"><img src="images/shots/screenshot-hsa-search.png" alt="HSA search" /></a>
+			<a href="http://cloud.medicor.se/dreamstream/"><img src="images/shots/screenshot-dreamstream.png" alt="Soundcloud Unfollow" /></a>
+			<a href="https://github.com/medicor/soundcloud-unfollow"></a>
+			<div class="app-details">
+				<header>Soundcloud Unfollow</header>
+				<summary>
+					A vanilla <a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform</a> app,
+					that lets a SoundCloud user list all users that are followed but aren't following back.
+					Just using the <a href="https://developers.soundcloud.com/docs/api/guide">SoundCloud API</a>
+					and <a href="https://cdn.polyfill.io/v2/docs/features/">Polyfill.io</a> for legacy browsers.
+					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">CSS transitions</a>
+					and plain JavaScript.
+				</summary>
+			</div>
+		</div>
+		<div class="app-item">
+			<a href="http://cloud.medicor.se/hsa-search/"><img src="images/shots/screenshot-hsa-search.png" alt="HSA search" /></a>
+			<a href="https://github.com/medicor/hsa-search"></a>
 			<div class="app-details">
 				<header>HSA search</header>
 				<summary>
@@ -164,66 +193,68 @@
 			</div>
 		</div>
 		<div class="app-item">
-			<a href="http://cloud.medicor.se/dreamstream"><img src="images/shots/screenshot-dreamstream.png" alt="Soundcloud Unfollow" /></a>
-			<div class="app-details">
-				<header>Soundcloud Unfollow</header>
-				<summary>
-					A vanilla <a href="https://www.webplatform.org/">Web Platform</a> app, 
-					that lets a SoundCloud user list all users that are followed but aren't following back. 
-					Just using the <a href="https://developers.soundcloud.com/docs/api/guide">SoundCloud API</a>
-					and <a href="https://cdn.polyfill.io/v2/docs/features/">Polyfill.io</a> for polyfilling legacy browsers.
-					Some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">CSS transitions</a>
-					and plain JavaScript dribbling.
-				</summary>
-			</div>
-		</div>
-		<div class="app-item">
 			<a href="http://tallyho.medicor.se/"><img src="images/shots/screenshot-tallyho.png" alt="TallyHo!" /></a>
+			<a href="https://github.com/medicor/tallyho"></a>
 			<div class="app-details">
 				<header>TallyHo!</header>
 				<summary>
 					Simple time tracking and invoicing with <a href="https://www.polymer-project.org/1.0/">Polymer</a>
-					and <a href="https://www.firebase.com/">Firebase</a>. 
-					Hosted on <a href="//tallyho.firebaseapp.com/">Firebase</a>.
+					and <a href="https://www.firebase.com/">Firebase</a> as back end and <a href="https://www.firebase.com/docs/hosting/">hosting sevice</a>.
 					<br><br>(under development <span class="fontelico-emo-coffee"></span>)
 				</summary>
 			</div>
 		</div>
 		<div class="app-item">
-			<a href="http://cloud.medicor.se/eda"><img src="images/shots/screenshot-eda.png" alt="EDA" /></a>
+			<a href="http://cloud.medicor.se/eda/"><img src="images/shots/screenshot-eda.png" alt="EDA" /></a>
+			<a href="https://github.com/medicor/eda"></a>
 			<div class="app-details">
 				<header>EDA</header>
 				<summary>
-					A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app that provides Explorative Data Analysis 
+					A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app that provides Explorative Data Analysis
 					with data from the quality register databases in <a href="https://stratum.registercentrum.se/#!page?id=1001">Stratum</a>.
 					<br><br>(under development <span class="fontelico-emo-coffee"></span>)
 				</summary>
 			</div>
 		</div>
-		<div class="app-item unused">
-			<img src="images/shots/placeholder.png" alt="Unused slot" />
+		<div class="app-item">
+			<a href="http://medicor.github.io/"><img src="images/shots/screenshot-medicor-gh.png" alt="Medicor's GH pages" /></a>
+			<a href="https://github.com/medicor/medicor.se"></a>
 			<div class="app-details">
-				<header></header>
+				<header>medicor.github.io</header>
 				<summary>
-					A REPL for transforming and visualizing json data. 
-					Kind of miss some things in the otherwise awesome <a href="https://tonicdev.com/">Tonicdev</a>, like
-					a table representation of data and a more acceptable charting tool.
+					My Github Pages, a blog using <a href="https://jekyllrb.com/">Jekyll</a> and
+					<a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer for Bootstrap</a>.
+					Markdown posts are edited with <a href="https://stackedit.io">StackEdit</a> and automatically
+					pushed to both Google Drive and Github.
 				</summary>
 			</div>
 		</div>
-		<div class="app-item unused">
-			<img src="images/shots/placeholder.png" alt="Unused slot" />
+		<div class="app-item">
+			<a href="http://stratum.medicor.se/"><img src="images/shots/screenshot-stratum-blog.png" alt="Stratum blog" /></a>
+			<a href="https://github.com/medicor/stratum.medicor.se"></a>
 			<div class="app-details">
-				<header></header>
+				<header>Stratum blog</header>
 				<summary>
+					A blog built with <a href="https://hexo.io/">Hexo</a>,
+					which can be setup as a static site generator like <a href="https://jekyllrb.com/">Jekyll</a>
+					or as a live Node.js server.
+					Uses my Hexo theme <a href="https://github.com/medicor/lightpush">Lightpush</a>,
+					my Hexo filter <a href="https://github.com/medicor/hexo-filter-api/">hexo-filter-api</a>
+					and the <a href="https://github.com/tryghost/Ghost">Ghost</a> like admin tool,
+					<a href="https://github.com/jaredly/hexo-admin">hexo-admin</a>.
 				</summary>
 			</div>
 		</div>
-		<div class="app-item unused">
-			<img src="images/shots/placeholder.png" alt="Unused slot" />
+		<div class="app-item">
+			<a href="http://nara.medicor.se/"><img src="images/shots/screenshot-nara.png" alt="NARA" /></a>
+			<a href="https://github.com/medicor/nara"></a>
 			<div class="app-details">
-				<header></header>
+				<header>NARA</header>
 				<summary>
+					A simple two-page, server-side rendered app built with Node.js, Express,
+					<a href="https://github.com/ericf/express-handlebars">Express Handlebars</a>,
+					<a href="https://www.contentful.com/">Contentful</a> (used local MongoDB earlier) and Bootstrap.
+					Also free-hosted at the <a href ="http://nara-medicor.rhcloud.com/">OpenShift</a> PaaS (mostly hybernated).
 				</summary>
 			</div>
 		</div>
