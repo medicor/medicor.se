@@ -79,15 +79,15 @@
 		.app-item > a > img {
 			width: 200px;
 			height: 150px;
-			box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
 			margin-bottom: 1rem;
-			transition: all 0.3s;
-			filter: grayscale(100%);
+			transition: all 0.2s;
+			box-shadow: 0px 0px 10px #90a4ae;
+			transform: none;
 		}
 
 		.app-item > a > img:hover {
-			/*filter: sepia(100%) saturate(200%) hue-rotate(240deg);*/
-			filter: grayscale(0%);
+			box-shadow: 0px 15px 15px #b0bec5;
+			transform: perspective(600px) rotateX(35deg);
 		}
 
 		.app-item > a:nth-child(2) {
@@ -146,23 +146,48 @@
 			</div>
 		</div>
 		<div class="app-item">
+			<a href="http://metaviewer.medicor.se/spoq"><img src="images/shots/screenshot-metaviewer.png" alt="Metaviewer" /></a>
+			<a href="https://github.com/medicor/metaviewer"></a>
+			<div class="app-details">
+				<header>Jaysee</header>
+				<summary>
+					Visualizing structure of registers in <a href="https://stratum.registercentrum.se">Stratum</a>.
+					Made with <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a>,
+					<a href="http://bulma.io">Bulma</a> CSS framework and
+					<a href="https://github.com/d3/d3-hierarchy/blob/master/README.md#tree">D3 trees</a>.
+				</summary>
+			</div>
+		</div>
+		<div class="app-item">
+			<a href="http://jaysee.medicor.se/?call=http%3A%2F%2Fstratum.registercentrum.se%2Fapi%2Fmetadata%2Fregisters%3Fapikey%3DbK3H9bwaG4o%3D"><img src="images/shots/screenshot-jaysee-d3.png" alt="Jaysee (D3)" /></a>
+			<a href="https://github.com/medicor/jaysee/tree/d3"></a>
+			<div class="app-details">
+				<header>Jaysee</header>
+				<summary>
+					Yet another JSON visualizer <span class="fontelico-emo-thumbsup">.
+					Made with <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a> and <a href="https://github.com/d3/d3-hierarchy/blob/master/README.md#tree">D3</a>.
+					CORS support through a <a href="https://www.nginx.com/resources/admin-guide/reverse-proxy/">reverse proxy in NGINX</a>.
+				</summary>
+			</div>
+		</div>
+		<div class="app-item">
+			<a href="http://jaysee.medicor.se/mdl/?call=http%3A%2F%2Fstratum.registercentrum.se%2Fapi%2Fmetadata%2Fregisters%3Fapikey%3DbK3H9bwaG4o%3D"><img src="images/shots/screenshot-jaysee-mdl.png" alt="Jaysee (MDL)" /></a>
+			<a href="https://github.com/medicor/jaysee/tree/master"></a>
+			<div class="app-details">
+				<header>Jaysee</header>
+				<summary>
+					Yet another JSON visualizer <span class="fontelico-emo-thumbsup">.
+					Made with <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a> and <a href="https://getmdl.io/">Google MDL</a>.
+				</summary>
+			</div>
+		</div>
+		<div class="app-item">
 			<a href="http://biomedbarnen.webflow.io/"><img src="images/shots/screenshot-biomedbarnen.png" alt="Bio med barnen" /></a>
 			<div class="app-details">
 				<header>Bio med barnen</header>
 				<summary>
 					A small blog made with the awesome <a href="https://webflow.com/">Webflow</a> designer tool. Here is were we plan our
 					next movie-and-dinner session.
-				</summary>
-			</div>
-		</div>
-		<div class="app-item">
-			<a href="http://jaysee.medicor.se/"><img src="images/shots/screenshot-jaysee.png" alt="Jaysee" /></a>
-			<a href="https://github.com/medicor/jaysee"></a>
-			<div class="app-details">
-				<header>Jaysee</header>
-				<summary>
-					Yet another JSON visualizer <span class="fontelico-emo-thumbsup">.
-					My first shot att both <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a> and <a href="https://getmdl.io/">Google MDL</a>.
 				</summary>
 			</div>
 		</div>
@@ -200,8 +225,8 @@
 				<header>TallyHo!</header>
 				<summary>
 					Simple time tracking and invoicing with <a href="https://www.polymer-project.org/1.0/">Polymer</a>
-					and <a href="https://www.firebase.com/">Firebase</a> as back end and <a href="https://www.firebase.com/docs/hosting/">hosting sevice</a>.
-					<br><br>(under development <span class="fontelico-emo-coffee"></span>)
+					+ <a href="https://www.firebase.com/">Firebase</a> as back end and <a href="https://www.firebase.com/docs/hosting/">hosting sevice</a>.
+					<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)
 				</summary>
 			</div>
 		</div>
@@ -213,7 +238,7 @@
 				<summary>
 					A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app that provides Explorative Data Analysis
 					with data from the quality register databases in <a href="https://stratum.registercentrum.se/#!page?id=1001">Stratum</a>.
-					<br><br>(under development <span class="fontelico-emo-coffee"></span>)
+					<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)
 				</summary>
 			</div>
 		</div>
@@ -259,6 +284,7 @@
 				</summary>
 			</div>
 		</div>
+		<!--
 		<div class="app-item unused">
 			<img src="images/shots/placeholder.png" alt="Unused slot" />
 			<div class="app-details">
@@ -267,14 +293,7 @@
 				</summary>
 			</div>
 		</div>
-		<div class="app-item unused">
-			<img src="images/shots/placeholder.png" alt="Unused slot" />
-			<div class="app-details">
-				<header></header>
-				<summary>
-				</summary>
-			</div>
-		</div>
+		-->
 	</div>
 	<script>
 		/* global Bliss */
