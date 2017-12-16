@@ -19,19 +19,19 @@
 		}
 
 		body {
-			color: #333;
-			background: #fafafa;
+			color: #eee;
+			background: #222;
 			font: 16px 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		}
 
 		h1 {
-			color: #6a1b9a;
+			color: #ba68c8;
 			line-height: 2rem;
 			margin-top: 0;
 		}
 
 		a {
-			color: #6a1b9a;
+			color: #e1bee7;
 			text-decoration: none;
 		}
 
@@ -51,8 +51,8 @@
 			flex: 1 0 15rem;
 			margin: 2rem 1rem 1rem 1rem;
 			padding: 1rem;
-			border: 1px solid #ccc;
-			background-color: #eceff1;
+			border: 1px solid #111;
+			background-color: #333;
 			opacity: 0;
 			transform: scale(0.5);
 		}
@@ -63,17 +63,17 @@
 		}
 
 		.app-item.unused {
-			border-color: #eee;
-			background-color: #fefefe;
+			border-color: #000;
+			background-color: #222;
 		}
 
 		.app-item.unused > img {
-			box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.07);
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
 		}
 
 		.app-item.unused > .app-details:before {
 			content: 'To be made ... ';
-			color: #ccc;
+			color: #999;
 		}
 
 		.app-item > a > img {
@@ -81,12 +81,12 @@
 			height: 150px;
 			margin-bottom: 1rem;
 			transition: all 0.2s;
-			box-shadow: 0px 0px 10px #90a4ae;
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 			transform: none;
 		}
 
 		.app-item > a > img:hover {
-			box-shadow: 0px 15px 15px #b0bec5;
+			box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
 			transform: perspective(600px) rotateX(35deg);
 		}
 
@@ -149,7 +149,7 @@
 			<a href="http://metaviewer.medicor.se/spoq"><img src="images/shots/screenshot-metaviewer.png" alt="Metaviewer" /></a>
 			<a href="https://github.com/medicor/metaviewer"></a>
 			<div class="app-details">
-				<header>Jaysee</header>
+				<header>Metaviewer</header>
 				<summary>
 					Visualizing structure of registers in <a href="https://stratum.registercentrum.se">Stratum</a>.
 					Made with <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a>,
@@ -162,7 +162,7 @@
 			<a href="http://jaysee.medicor.se/?call=http%3A%2F%2Fstratum.registercentrum.se%2Fapi%2Fmetadata%2Fregisters%3Fapikey%3DbK3H9bwaG4o%3D"><img src="images/shots/screenshot-jaysee-d3.png" alt="Jaysee (D3)" /></a>
 			<a href="https://github.com/medicor/jaysee/tree/d3"></a>
 			<div class="app-details">
-				<header>Jaysee</header>
+				<header>Jaysee (revisited)</header>
 				<summary>
 					Yet another JSON visualizer <span class="fontelico-emo-thumbsup">.
 					Made with <a href="https://vuejs.org/v2/api/">Vue.js 2.0</a> and <a href="https://github.com/d3/d3-hierarchy/blob/master/README.md#tree">D3</a>.
@@ -218,30 +218,30 @@
 				</summary>
 			</div>
 		</div>
-		<div class="app-item">
-			<a href="http://tallyho.medicor.se/"><img src="images/shots/screenshot-tallyho.png" alt="TallyHo!" /></a>
-			<a href="https://github.com/medicor/tallyho"></a>
-			<div class="app-details">
-				<header>TallyHo!</header>
-				<summary>
-					Simple time tracking and invoicing with <a href="https://www.polymer-project.org/1.0/">Polymer</a>
-					+ <a href="https://www.firebase.com/">Firebase</a> as back end and <a href="https://www.firebase.com/docs/hosting/">hosting sevice</a>.
-					<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)
-				</summary>
-			</div>
-		</div>
-		<div class="app-item">
-			<a href="http://cloud.medicor.se/eda/"><img src="images/shots/screenshot-eda.png" alt="EDA" /></a>
-			<a href="https://github.com/medicor/eda"></a>
-			<div class="app-details">
-				<header>EDA</header>
-				<summary>
-					A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app that provides Explorative Data Analysis
-					with data from the quality register databases in <a href="https://stratum.registercentrum.se/#!page?id=1001">Stratum</a>.
-					<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)
-				</summary>
-			</div>
-		</div>
+		<!--<div class="app-item">-->
+		<!--	<a href="http://tallyho.medicor.se/"><img src="images/shots/screenshot-tallyho.png" alt="TallyHo!" /></a>-->
+		<!--	<a href="https://github.com/medicor/tallyho"></a>-->
+		<!--	<div class="app-details">-->
+		<!--		<header>TallyHo!</header>-->
+		<!--		<summary>-->
+		<!--			Simple time tracking and invoicing with <a href="https://www.polymer-project.org/1.0/">Polymer</a>-->
+		<!--			+ <a href="https://www.firebase.com/">Firebase</a> as backend and <a href="https://www.firebase.com/docs/hosting/">hosting sevice</a>.-->
+		<!--			<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)-->
+		<!--		</summary>-->
+		<!--	</div>-->
+		<!--</div>-->
+		<!--<div class="app-item">-->
+		<!--	<a href="http://cloud.medicor.se/eda/"><img src="images/shots/screenshot-eda.png" alt="EDA" /></a>-->
+		<!--	<a href="https://github.com/medicor/eda"></a>-->
+		<!--	<div class="app-details">-->
+		<!--		<header>EDA</header>-->
+		<!--		<summary>-->
+		<!--			A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app that provides Explorative Data Analysis-->
+		<!--			with data from the quality register databases in <a href="https://stratum.registercentrum.se/#!page?id=1001">Stratum</a>.-->
+		<!--			<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)-->
+		<!--		</summary>-->
+		<!--	</div>-->
+		<!--</div>-->
 		<div class="app-item">
 			<a href="http://medicor.github.io/"><img src="images/shots/screenshot-medicor-gh.png" alt="Medicor's GH pages" /></a>
 			<a href="https://github.com/medicor/medicor.se"></a>
@@ -284,7 +284,6 @@
 				</summary>
 			</div>
 		</div>
-		<!--
 		<div class="app-item unused">
 			<img src="images/shots/placeholder.png" alt="Unused slot" />
 			<div class="app-details">
@@ -293,7 +292,14 @@
 				</summary>
 			</div>
 		</div>
-		-->
+		<div class="app-item unused">
+			<img src="images/shots/placeholder.png" alt="Unused slot" />
+			<div class="app-details">
+				<header></header>
+				<summary>
+				</summary>
+			</div>
+		</div>
 	</div>
 	<script>
 		/* global Bliss */
