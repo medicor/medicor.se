@@ -48,7 +48,7 @@
 		}
 
 		.app-item {
-			flex: 1 0 15rem;
+			flex: 1 0 5rem;
 			margin: 2rem 1rem 1rem 1rem;
 			padding: 1rem;
 			border: 1px solid #111;
@@ -165,16 +165,16 @@
 				</summary>
 			</div>
 		</div>
-		<div class="app-item">
-			<a href="http://biomedbarnen.webflow.io/"><img src="images/shots/screenshot-biomedbarnen.png" alt="Bio med barnen" /></a>
-			<div class="app-details">
-				<header>Bio med barnen</header>
-				<summary>
-					A small blog made with the awesome <a href="https://webflow.com/">Webflow</a> designer tool. Here is were we plan our
-					next movie-and-dinner session.
-				</summary>
-			</div>
-		</div>
+		<!--<div class="app-item">-->
+		<!--	<a href="http://biomedbarnen.webflow.io/"><img src="images/shots/screenshot-biomedbarnen.png" alt="Bio med barnen" /></a>-->
+		<!--	<div class="app-details">-->
+		<!--		<header>Bio med barnen</header>-->
+		<!--		<summary>-->
+		<!--			A small blog made with the awesome <a href="https://webflow.com/">Webflow</a> designer tool. Here is were we plan our-->
+		<!--			next movie-and-dinner session.-->
+		<!--		</summary>-->
+		<!--	</div>-->
+		<!--</div>-->
 		<div class="app-item">
 			<a href="http://cloud.medicor.se/dreamstream/"><img src="images/shots/screenshot-dreamstream.png" alt="Soundcloud Unfollow" /></a>
 			<a href="https://github.com/medicor/soundcloud-unfollow"></a>
@@ -182,11 +182,9 @@
 				<header>Soundcloud Unfollow</header>
 				<summary>
 					A vanilla <a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform</a> app,
-					that lets a SoundCloud user list all users that are followed but aren't following back.
-					Just using the <a href="https://developers.soundcloud.com/docs/api/guide">SoundCloud API</a>
+					that lets you list your SoundCloud followings that aren't following you back.
+					Using the <a href="https://developers.soundcloud.com/docs/api/guide">SoundCloud API</a>
 					and <a href="https://cdn.polyfill.io/v2/docs/features/">Polyfill.io</a> for legacy browsers.
-					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">CSS transitions</a>
-					and plain JavaScript.
 				</summary>
 			</div>
 		</div>
@@ -197,8 +195,7 @@
 				<header>HSA search</header>
 				<summary>
 					A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app to search the HSA catalog (Swedish healthcare entities).
-					Data is cached in a local MongoDB database, accessed through a <a href="https://github.com/codecapers/mongodb-rest">mongodb-rest</a> interface,
-					since their <a href="http://www.hip.se/en/development-kit-citizen-services/domain/5141bf7ee211b84875000010/meta/">api</a> does not provide CORS (as far as I know).
+					Data is from a local MongoDB database, accessed through a <a href="https://github.com/codecapers/mongodb-rest">mongodb-rest</a> interface.
 				</summary>
 			</div>
 		</div>
@@ -263,28 +260,43 @@
 				<summary>
 					A simple two-page, server-side rendered app built with Node.js, Express,
 					<a href="https://github.com/ericf/express-handlebars">Express Handlebars</a>,
-					<a href="https://www.contentful.com/">Contentful</a> (used local MongoDB earlier) and Bootstrap.
-					Also free-hosted at the <a href ="http://nara-medicor.rhcloud.com/">OpenShift</a> PaaS (mostly hybernated).
+					<a href="https://www.contentful.com/">Contentful</a> (MongoDB earlier) and Bootstrap.
 				</summary>
 			</div>
 		</div>
-		<!--<div class="app-item unused">-->
-		<!--	<img src="images/shots/placeholder.png" alt="Unused slot" />-->
-		<!--	<div class="app-details">-->
-		<!--		<header></header>-->
-		<!--		<summary>-->
-		<!--		</summary>-->
-		<!--	</div>-->
-		<!--</div>-->
-		<!--<div class="app-item unused">-->
-		<!--	<img src="images/shots/placeholder.png" alt="Unused slot" />-->
-		<!--	<div class="app-details">-->
-		<!--		<header></header>-->
-		<!--		<summary>-->
-		<!--		</summary>-->
-		<!--	</div>-->
-		<!--</div>-->
+		<div class="app-item">
+			<a href="http://cloud.medicor.se/eda/"><img src="images/shots/screenshot-eda-v1.png" alt="EDA" /></a>
+			<a href="https://github.com/medicor/eda/tree/master"></a>
+			<div class="app-details">
+				<header>EDA</header>
+				<summary>
+					An <a href="https://www.sencha.com/products/extjs/#overview/">ExtJS</a> widget for the <a href="https://stratum.registercentrum.se/">Stratum</a> system for quality registers
+					to do explorative data analysis (unfinished).
+				</summary>
+			</div>
+		</div>
+		<div class="app-item">
+			<a href="http://cloud.medicor.se/ihs/"><img src="images/shots/screenshot-ihs.png" alt="International Hip Society" /></a>
+			<a href="https://github.com/medicor/ihs"></a>
+			<div class="app-details">
+				<header>IHS</header>
+				<summary>
+					A small SPA built with <a href="https://vuejs.org/v2/guide/">Vue.js</a> and
+					<a href="https://www.storyblok.com/">Storyblok</a> as backend and headless CMS.
+					Real Vue.js components working even in IE11!
+				</summary>
+			</div>
+		</div>
+		<div class="app-item unused">
+			<img src="images/shots/placeholder.png" alt="Unused slot" />
+			<div class="app-details">
+				<header></header>
+				<summary>
+				</summary>
+			</div>
+		</div>
 	</div>
+	<a style="position: fixed; bottom: 24px; right: 24px" href="https://dev.to/medicor"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Roger Salomonsson's DEV Profile" height="30" width="30" /></a>
 	<script>
 		/* global Bliss */
 		Bliss.ready().then(function(){
