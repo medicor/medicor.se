@@ -42,8 +42,8 @@
 		.app-container {
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: flex-start;
-			align-content: stretch;
+			/*justify-content: flex-start;*/
+			/*align-content: flex-start;*/
 			align-items: stretch;
 		}
 
@@ -130,6 +130,18 @@
 			</div>
 		</div>
 		<div class="app-item">
+			<a href="http://cloud.medicor.se/ihs/"><img src="images/shots/screenshot-ihs.png" alt="International Hip Society" /></a>
+			<a href="https://github.com/medicor/ihs"></a>
+			<div class="app-details">
+				<header>IHS</header>
+				<summary>
+					A small SPA built with <a href="https://vuejs.org/v2/guide/">Vue.js</a> and
+					<a href="https://www.storyblok.com/">Storyblok</a> as backend and headless CMS.
+					Real Vue.js components working even in IE11!
+				</summary>
+			</div>
+		</div>
+		<div class="app-item">
 			<a href="http://metaviewer.medicor.se/spoq"><img src="images/shots/screenshot-metaviewer.png" alt="Metaviewer" /></a>
 			<a href="https://github.com/medicor/metaviewer"></a>
 			<div class="app-details">
@@ -165,16 +177,6 @@
 				</summary>
 			</div>
 		</div>
-		<!--<div class="app-item">-->
-		<!--	<a href="http://biomedbarnen.webflow.io/"><img src="images/shots/screenshot-biomedbarnen.png" alt="Bio med barnen" /></a>-->
-		<!--	<div class="app-details">-->
-		<!--		<header>Bio med barnen</header>-->
-		<!--		<summary>-->
-		<!--			A small blog made with the awesome <a href="https://webflow.com/">Webflow</a> designer tool. Here is were we plan our-->
-		<!--			next movie-and-dinner session.-->
-		<!--		</summary>-->
-		<!--	</div>-->
-		<!--</div>-->
 		<div class="app-item">
 			<a href="http://cloud.medicor.se/dreamstream/"><img src="images/shots/screenshot-dreamstream.png" alt="Soundcloud Unfollow" /></a>
 			<a href="https://github.com/medicor/soundcloud-unfollow"></a>
@@ -184,7 +186,7 @@
 					A vanilla <a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform</a> app,
 					that lets you list your SoundCloud followings that aren't following you back.
 					Using the <a href="https://developers.soundcloud.com/docs/api/guide">SoundCloud API</a>
-					and <a href="https://cdn.polyfill.io/v2/docs/features/">Polyfill.io</a> for legacy browsers.
+					and <a href="https://cdn.polyfill.io/v2/docs/features/">Polyfill.io</a>.
 				</summary>
 			</div>
 		</div>
@@ -199,30 +201,6 @@
 				</summary>
 			</div>
 		</div>
-		<!--<div class="app-item">-->
-		<!--	<a href="http://tallyho.medicor.se/"><img src="images/shots/screenshot-tallyho.png" alt="TallyHo!" /></a>-->
-		<!--	<a href="https://github.com/medicor/tallyho"></a>-->
-		<!--	<div class="app-details">-->
-		<!--		<header>TallyHo!</header>-->
-		<!--		<summary>-->
-		<!--			Simple time tracking and invoicing with <a href="https://www.polymer-project.org/1.0/">Polymer</a>-->
-		<!--			+ <a href="https://www.firebase.com/">Firebase</a> as backend and <a href="https://www.firebase.com/docs/hosting/">hosting sevice</a>.-->
-		<!--			<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)-->
-		<!--		</summary>-->
-		<!--	</div>-->
-		<!--</div>-->
-		<!--<div class="app-item">-->
-		<!--	<a href="http://cloud.medicor.se/eda/"><img src="images/shots/screenshot-eda.png" alt="EDA" /></a>-->
-		<!--	<a href="https://github.com/medicor/eda"></a>-->
-		<!--	<div class="app-details">-->
-		<!--		<header>EDA</header>-->
-		<!--		<summary>-->
-		<!--			A <a href="https://www.polymer-project.org/1.0/">Polymer</a> app that provides Explorative Data Analysis-->
-		<!--			with data from the quality register databases in <a href="https://stratum.registercentrum.se/#!page?id=1001">Stratum</a>.-->
-		<!--			<br><br>(IN ICEBOX <span class="fontelico-emo-coffee"></span>)-->
-		<!--		</summary>-->
-		<!--	</div>-->
-		<!--</div>-->
 		<div class="app-item">
 			<a href="http://medicor.github.io/"><img src="images/shots/screenshot-medicor-gh.png" alt="Medicor's GH pages" /></a>
 			<a href="https://github.com/medicor/medicor.se"></a>
@@ -231,8 +209,8 @@
 				<summary>
 					My Github Pages, a blog using <a href="https://jekyllrb.com/">Jekyll</a> and
 					<a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer for Bootstrap</a>.
-					Markdown posts are edited with <a href="https://stackedit.io">StackEdit</a> and automatically
-					pushed to both Google Drive and Github.
+					Markdown posts are made with <a href="https://stackedit.io">StackEdit</a> and
+					pushed Github.
 				</summary>
 			</div>
 		</div>
@@ -242,9 +220,7 @@
 			<div class="app-details">
 				<header>Stratum blog</header>
 				<summary>
-					A blog built with <a href="https://hexo.io/">Hexo</a>,
-					which can be setup as a static site generator like <a href="https://jekyllrb.com/">Jekyll</a>
-					or as a live Node.js server.
+					A blog built with <a href="https://hexo.io/">Hexo</a>.
 					Uses my Hexo theme <a href="https://github.com/medicor/lightpush">Lightpush</a>,
 					my Hexo filter <a href="https://github.com/medicor/hexo-filter-api/">hexo-filter-api</a>
 					and the <a href="https://github.com/tryghost/Ghost">Ghost</a> like admin tool,
@@ -270,23 +246,34 @@
 			<div class="app-details">
 				<header>EDA</header>
 				<summary>
-					An <a href="https://www.sencha.com/products/extjs/#overview/">ExtJS</a> widget for the <a href="https://stratum.registercentrum.se/">Stratum</a> system for quality registers
+					An <a href="https://www.sencha.com/products/extjs/#overview/">ExtJS</a> app for the <a href="https://stratum.registercentrum.se/">Stratum</a> system for quality registers
 					to do explorative data analysis (unfinished).
 				</summary>
 			</div>
 		</div>
 		<div class="app-item">
-			<a href="http://cloud.medicor.se/ihs/"><img src="images/shots/screenshot-ihs.png" alt="International Hip Society" /></a>
-			<a href="https://github.com/medicor/ihs"></a>
+			<a href="http://cloud.medicor.se/metabrowser/"><img src="images/shots/screenshot-metabrowser.png" alt="Metabrowser" /></a>
+			<a href="https://github.com/medicor/metabrowser"></a>
 			<div class="app-details">
-				<header>IHS</header>
+				<header>Metabrowser</header>
 				<summary>
-					A small SPA built with <a href="https://vuejs.org/v2/guide/">Vue.js</a> and
-					<a href="https://www.storyblok.com/">Storyblok</a> as backend and headless CMS.
-					Real Vue.js components working even in IE11!
+					An early HTML app showing statistics about quality registers in <a href="https://registercentrum.se/vara-tjaenster/it-loesningar-foer-kvalitetsregister/registerplattformen-stratum/p/Bym9RB1Uz">Stratum</a>.
+					Built with <a href="https://www.sencha.com/products/touch/">Sencha Touch</a> and the <a href="https://stratum.docs.apiary.io/">Stratum api</a>
 				</summary>
 			</div>
 		</div>
+		<div class="app-item">
+			<a href="http://tallyho.medicor.se/"><img src="images/shots/screenshot-tallyho-extjs.png" alt="TallyHo!" /></a>
+			<a href="https://github.com/medicor/tallyho"></a>
+			<div class="app-details">
+				<header>TallyHo!</header>
+				<summary>
+					Simple time tracking and invoicing with <a href="https://www.sencha.com/products/extjs/#overview">ExtJS 3.2</a>
+					<br>(unfinished <span class="fontelico-emo-coffee"></span>)
+				</summary>
+			</div>
+		</div>
+		<!--
 		<div class="app-item unused">
 			<img src="images/shots/placeholder.png" alt="Unused slot" />
 			<div class="app-details">
@@ -295,6 +282,7 @@
 				</summary>
 			</div>
 		</div>
+		-->
 	</div>
 	<a style="position: fixed; bottom: 24px; right: 24px" href="https://dev.to/medicor"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Roger Salomonsson's DEV Profile" height="30" width="30" /></a>
 	<script>
